@@ -1,4 +1,4 @@
-# AI-Text-Or-Image-Chat-Bot-Python
+# Personal AI Chatbot
 <h2>ChatBot for Discord</h2> 
 <p>Residing in your Discord text channel(s), this AI-driven ChatBot listens for user commands (e.g., !ask ____) and replies in the same channel with both AI-generated content and a [Draw] button, the latter using AI to generate an image based on the bot's message. Each command starts with "!". To "!ask ___", the ChatBot sends a request to the OpenAI API with the default system message, then formats and sends the response to the user; to "!ask prompt ___", it generates a prompt via the OpenAI API and the prompt-specific system message, the former of which can be used directly by simply clicking [Draw]; to !draw (or [Draw]), it responds with a newly AI-generated image, having used either the OpenAI API or, locally, <a href="https://github.com/dome272/Wuerstchen">Wüerstchen</a> (one branch for each); and, last, to !edit with an edited image, again using the OpenAI API and based on both the user prompt and on a customizable mask (defaults to a circle in the middle of the picture, though I created and tested several possible solutions, included in edit_by_api.py).</p>
 
@@ -30,10 +30,7 @@
 <p>As with openai_generation branch, Draw button included after every !ask response to draw image based on the response, which can be an ai-generated prompt. system_message includes basic prompt parameters, so "!ask prompt for an epic spaceship battle with fun details" should format it decently well. system_mesage can be changed as desired under text_by_api.py.</p>
 <p>As with openai_generation branch, ncludes error handling, pagination for responses over 2000 characters (Discord's limit), and prepends escape character \ to > (quote block) and / (command).</p>
 <p>Requires beefy GPU for generation, though Wuerstchen is extremely fast. Resolution can be lowered to speed up generation, located in bot_controller.py under draw_image(). Max (default) res is 2048x2048.</p>
-<h4>--------</h4>
-<h4>local_video</h4>
-<p>Currently in development! Please feel free to contribute :) thank you.</p>
-<p>-Peter</p>
+
 
 <h2>Installation</h2>
 <ul>
